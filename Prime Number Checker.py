@@ -17,3 +17,17 @@ def is_prime(num):
         return True
     else:
         return False
+#----------------------------------------------------------------------------------OR------------------------------------------------------------------------------
+def is_prime(num):
+    if num < 0:
+        return False
+    factors = []
+    for index in range(num + 1):
+        if index != 0:
+            number = num/index
+            if number % 1 == 0:
+                factors.append(index)
+    if len(factors) == 2:
+        return True
+    else:
+        return False
